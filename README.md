@@ -46,7 +46,7 @@ This project is a maze solver application built using Python and Tkinter. The ap
 ## Project Structure
 
 - `main.py`: Main application file.
-- `window.py`: Generates a new window class.
+- `graphics.py`: Generates the maze.
 
 ## Contributing
 
