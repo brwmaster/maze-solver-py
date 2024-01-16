@@ -47,6 +47,7 @@ This project is a maze solver application built using Python and Tkinter. The ap
 
 - `main.py`: Main application file.
 - `graphics.py`: Generates the maze.
+- `cell.py`: Generates the cells 
 
 ## Contributing
 
