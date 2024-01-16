@@ -21,13 +21,13 @@ This project is a maze solver application built using Python and Tkinter. The ap
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/brwmaster/maze-solver-project.git
+    git clone https://github.com/brwmaster/maze-solver-py.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd maze-solver-project
+    cd maze-solver-py
     ```
 
 3. Run the application:
@@ -46,9 +46,7 @@ This project is a maze solver application built using Python and Tkinter. The ap
 ## Project Structure
 
 - `main.py`: Main application file.
-- `maze.py`: Maze generation and solving algorithms.
-- `gui.py`: Tkinter GUI implementation.
-- `utils.py`: Helper functions.
+- `window.py`: Generates a new window class.
 
 ## Contributing
 
