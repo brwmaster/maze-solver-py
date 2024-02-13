@@ -1,39 +1,49 @@
 from tkinter import Tk, BOTH, Canvas
 
-class Window():
-    def __init__(self, width: int, height: int) -> None:
-        self.__root = Tk()
-        self.__root.protocol("WM_DELETE_WINDOW", self.close)
-        self.__root.title("MazeSolver Py")
-        self.canvas = Canvas(self.__root, width=width, height=height)
-        self.canvas.pack(fill=BOTH, expand=1)
-        self.window_is_running = False
 
-    def redraw(self) -> None:
+class Window:
+    def __init__(self, width, height):
+        self.__root = Tk()
+        self.__root.title("Maze Solver")
+        self.__root.protocol("WM_DELETE_WINDOW", self.close)
+        self.__canvas = Canvas(self.__root, bg="white", height=height, width=width)
+        self.__canvas.pack(fill=BOTH, expand=1)
+        self.__running = False
+
+    def redraw(self):
         self.__root.update_idletasks()
         self.__root.update()
 
-    def wait_for_close(self) -> None:
-        self.window_is_running = True
-        while self.window_is_running:
+    def wait_for_close(self):
+        self.__running = True
+        while self.__running:
             self.redraw()
+        print("window closed...")
 
-    def close(self) -> None:
-        self.window_is_running = False
+    def draw_line(self, line, fill_color="black"):
+        line.draw(self.__canvas, fill_color)
 
-    def draw_line(self, line: 'Line', fill_color="white") -> None:
-        line.draw(self.canvas, fill_color)
+    def close(self):
+        self.__running = False
 
-class Point():
-    def __init__(self, x: int, y: int) -> None:
+
+class Point:
+    def __init__(self, x, y):
         self.x = x
         self.y = y
-    
-class Line():
-    def __init__(self, start: Point, end: Point) -> None:
-        self.start = start
-        self.end = end
-    
-    def draw(self, canvas: Canvas, fill_color="white") -> None:
-        canvas.create_line(self.start.x, self.start.y, self.end.x, self.end.y, fill=fill_color, width=2)
+
+
+class Line:
+    def __init__(
+        self,
+        p1,
+        p2,
+    ):
+        self.p1 = p1
+        self.p2 = p2
+
+    def draw(self, canvas, fill_color="black"):
+        canvas.create_line(
+            self.p1.x, self.p1.y, self.p2.x, self.p2.y, fill=fill_color, width=2
+        )
         canvas.pack(fill=BOTH, expand=1)
