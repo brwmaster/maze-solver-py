@@ -7,7 +7,6 @@ This project is a maze solver application built using Python and Tkinter. The ap
 ## Features
 
 - **Maze Generation:** Create mazes of various sizes and complexities.
-- **Algorithmic Solvers:** Implement and visualize maze-solving algorithms, such as Depth-First Search (DFS) or Breadth-First Search (BFS).
 - **Interactive GUI:** User-friendly graphical interface built with Tkinter for an engaging experience.
 - **Step-by-Step Visualization:** Watch the algorithm solve the maze step by step.
 
@@ -35,19 +34,16 @@ This project is a maze solver application built using Python and Tkinter. The ap
     ```bash
     python main.py
     ```
+    or
+   ```bash
+   python3 main.py
+   ```
 
 ## Usage
 
 - Run the application and use the GUI to:
   - Generate a new maze.
-  - Choose an algorithm to solve the maze.
   - Visualize the maze-solving process step by step.
-
-## Project Structure
-
-- `main.py`: Main application file.
-- `graphics.py`: Generates the maze.
-- `cell.py`: Generates the cells 
 
 ## Contributing
 
